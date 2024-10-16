@@ -1,0 +1,16 @@
+comment-section{
+    display: none;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+}
+
+//.card{each image div containng the button element}
+//.likeBtn{}
+//.commentBtn{}
+//.ButtonsDiv{}
+//.commentSection{}
+//.comment{}
+//.inputPostContainer{}
