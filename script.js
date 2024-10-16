@@ -66,12 +66,7 @@ const displayer = (imgUrl) => {
 
       const commentList = document.createElement("ul");
       commentList.className = "comment-list";
-      // commentList.style.display = "flex";
-      // commentList.style.flexDirection = "column";
-      // commentList.style.listStyle = "none";
-      // commentList.style.padding = "0";
-      // commentList.style.margin = "0 0 10px 0";
-      // commentList.style.overflowX = "auto";
+      
 
       const inputPostContainer = document.createElement("div");
      
@@ -144,12 +139,29 @@ const displayer = (imgUrl) => {
   mainContainer.prepend(card);
 };
 
+//To toggle between light and dark mode
+
+const ToggleDarkMode = () =>{
+  document.body.classList.toggle("dark-mode");
+  const toggleIcon = document.querySelector('.DarkModeToggle');
+
+toggleIcon.addEventListener('click', () => {
+
+  if (document.body.classList.contains('dark-mode')) {
+    toggleIcon.innerHTML = '<i class="fas fa-sun"></i>';
+  } else {
+    toggleIcon.innerHTML = '<i class="fas fa-moon"></i>';
+  }
+ 
+});
+
+  
+}
+
 document.querySelector(".btn").addEventListener("click", fetchRandomData);
-document
-  .getElementById("search-button")
-  .addEventListener("click", fetchDogByValue);
-//
-// commentButton.addEventListener("click", commentSection);
-// post.addEventListener("click", postAction);
+document.getElementById("search-button").addEventListener("click", fetchDogByValue);
+
+  
+ document.querySelector(".DarkModeToggle").addEventListener("click", ToggleDarkMode)
 
 loopDogs();
