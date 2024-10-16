@@ -1,35 +1,196 @@
-comment-section{
-    display: none;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-ul{
-    display: flex;
-    flex-direction: column;
-}
-
-//.card{each image div containng the button element}
-//.dog-image{styling for the images}
-//.like-button{style for like button}
-//.comment-button{style for comment button}
-//.ButtonsDiv{styling for the like and comment buton div}
-//.comment-item{to style each comment item}
-//.comment-list{styling for entire comment items div}
-//.input-post{stlying for the input field}
-//.post-button{styling for the post button}
-
-//.commentSection{}
-//.comment{}
-//.inputPostContainer{}
-
-
-
-/* Dark mode Styles */
-body.dark-mode {
+.dark-mode {
     background-color: #333;
-
-}
-body .dark-mode .card{
-    background-color: red;
+    color: #f0f0f0;
 }
 
-//Add other styles for the dark mode in this format
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Button Styles */
+.btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.post-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.post-button:hover {
+    background-color: #218838;
+}
+
+.fetch-button {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.fetch-button:hover {
+    background-color: #138496;
+}
+
+/* Like and Comment Button Styles */
+.like-button {
+    background-color: #ffc107;
+    color: black;
+}
+
+.like-button:hover {
+    background-color: #e0a800;
+}
+
+.comment-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.comment-button:hover {
+    background-color: #0056b3;
+}
+
+/* Dark Mode Button Styles */
+.dark-mode .like-button {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.dark-mode .comment-button {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Input Styles */
+input, #search-element {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.2s;
+    outline: none;
+}
+
+input, #search-element {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode input, .dark-mode #search-element {
+    border: 1px solid #555;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+input:focus, #search-element:focus {
+    transform: scale(1.02);
+}
+
+/* Input Post Container Styles */
+    .input-post-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.input-post {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.4s ease;
+}
+
+.input-post:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Image Animation */
+.dog-image {
+    max-width: 100%;
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease;
+}
+
+.dog-image:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.dark-mode .card {
+    background-color: #444;
+    border-color: #555;
+}
+
+.comment-section {
+    display: none;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.comment-list {
+    list-style-type: none;
+    padding: 0;
+   
+}
+
+.comment-item {
+    margin: 5px 0;
+    margin-right: 90px;
+    padding: 5px;
+    border-left: 3px solid blue;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.dark-mode .comment-item {
+    background-color: #555;
+    color: #f0f0f0;
+    border-bottom: 1px solid #666;
+}
