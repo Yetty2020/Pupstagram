@@ -8,9 +8,15 @@ ul{
 }
 
 //.card{each image div containng the button element}
-//.likeBtn{}
-//.commentBtn{}
-//.ButtonsDiv{}
+//.dog-image{styling for the images}
+//.like-button{style for like button}
+//.comment-button{style for comment button}
+//.ButtonsDiv{styling for the like and comment buton div}
+//.comment-item{to style each comment item}
+//.comment-list{styling for entire comment items div}
+//.input-post{stlying for the input field}
+//.post-button{styling for the post button}
+
 //.commentSection{}
 //.comment{}
 //.inputPostContainer{}

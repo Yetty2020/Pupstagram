@@ -74,11 +74,14 @@ const displayer = (imgUrl) => {
       // commentList.style.overflowX = "auto";
 
       const inputPostContainer = document.createElement("div");
-      inputPostContainer.style.display = "flex";
+     
     
       const inputPost = document.createElement("input");
+      inputPost.placeholder = "Write a comment...";
+      inputPost.className = "input-post";
       const postButton = document.createElement("button");
       postButton.textContent = "post";
+      postButton.className = "post-button";
 
       inputPostContainer.appendChild(inputPost);
       inputPostContainer.appendChild(postButton);
@@ -100,6 +103,7 @@ const displayer = (imgUrl) => {
       const dateTime = new Date().toLocaleString();
       const newComment = document.createElement("li");
       newComment.innerHTML = `user 001: ${text} (${dateTime})`;
+      newComment.className = "comment-item";
       commentList.appendChild(newComment);
       inputPost.value = ''; // Clear the input after posting
     }
@@ -115,15 +119,20 @@ const displayer = (imgUrl) => {
 
   const img = document.createElement("img");
   img.src = imgUrl;
+  img.className = "dog-image";
 
   const card = document.createElement("div");
+  card.className = "card";
 
   const buttonsDiv = document.createElement("div");
+  buttonsDiv.className = "buttonsDiv";
   const likeBtn = document.createElement("button");
+  likeBtn.className = "like-button";
 
   likeBtn.innerHTML = `<i class="far fa-heart" aria-hidden="true" id="empty-heart"></i>`;
   likeBtn.addEventListener("click", toggleLike);
   const commentBtn = document.createElement("button");
+  commentBtn.className = "comment-button";
   commentBtn.innerHTML = `<i class="fa fa-comment" aria-hidden="true"></i>`;
   commentBtn.addEventListener("click", commentSection);
 
