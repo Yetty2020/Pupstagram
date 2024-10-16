@@ -6,6 +6,21 @@ body {
     color: #333;
     transition: background-color 0.3s, color 0.3s;
 }
+header{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+header h2{
+    font-size: 50px;
+}
+header p{
+    font-size: 18px;
+    font-style: italic;
+}
 
 .dark-mode {
     background-color: #333;
@@ -117,6 +132,7 @@ input:focus, #search-element:focus {
 /* Input Post Container Styles */
     .input-post-container {
     display: flex;
+    
     align-items: center;
     margin-top: 10px;
 }
