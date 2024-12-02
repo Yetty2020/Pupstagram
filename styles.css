@@ -28,9 +28,31 @@ header p{
 }
 
 .container {
-    max-width: 800px;
+    display: flex
+    /* max-width: 800px; */
     margin: auto;
     text-align: center;
+}
+
+#img-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+
+
+
+
+
+
+}
+
+.dog-image{
+    width: 300px;
+    height: 300px;
 }
 
 button {
@@ -171,6 +193,7 @@ input:focus, #search-element:focus {
 }
 
 .card {
+    
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 10px;
