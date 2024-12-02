@@ -13,10 +13,10 @@ async function fetchDogByValue() {
     const response = await fetch(url);
     const data = await response.json();
     
-    // if (!value){
-    //   mainContainer.innerHTML = `<p>No match</p>`
-    //   return;
-    // }
+    if (!value){
+      mainContainer.innerHTML = `<p>What are you looking for?</p>`
+      return;
+    }
 
     mainContainer.innerHTML = "";
 
@@ -48,7 +48,7 @@ async function fetchRandomData() {
 
 async function loopDogs() {
   const Array_of_results = [];
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 15; i++) {
     Array_of_results.push(fetch("https://dog.ceo/api/breeds/image/random"));
   }
   try {
@@ -149,7 +149,7 @@ const displayer = (imgUrl) => {
   card.appendChild(img);
   card.appendChild(buttonsDiv);
 
-  mainContainer.prepend(card);
+  mainContainer.appendChild(card);
 };
 
 backButton.addEventListener("click", () => {
